@@ -1,18 +1,24 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="container is-max-desktop">
+    <h1 class="title">
+      Добро пожаловать в тестовую программу на Vue.js и Laravel 8
+    </h1>
+    <div class="logo">
+      <img alt="Vue logo" src="../assets/logo.png" />
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
 };
 </script>
+
+<style scoped>
+.logo {
+  display: flex;
+  justify-content: center;
+}
+</style>
