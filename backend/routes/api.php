@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Api'], function () {
     });
 
     Route::group(['namespace' => 'Order'], function () {
-        Route::middleware([])->group( function () { //'auth:api'
+        Route::middleware(['auth:api'])->group( function () {
             Route::get('orders', 'OrderController@index');
             Route::put('orders', 'OrderController@update');
             Route::patch('orders/{id}', 'OrderController@patch');
