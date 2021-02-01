@@ -1,0 +1,6 @@
+Создайте базу для подключения:
+
+MySQL, localhost
+База Данных: olegkey_testdb
+Пользователь: olegkey_testu
+Пароль: 55555555
