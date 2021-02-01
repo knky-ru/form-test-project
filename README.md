@@ -22,5 +22,5 @@
 * Run `php artisan serve` to start backend
 * Make sure it started at port :8000.
 
-### Run app
+### Open app
 * Open http://localhost:8080/ 
