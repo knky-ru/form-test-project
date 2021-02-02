@@ -1,6 +1,6 @@
 <template>
     <div class="columns">
-        <div class="column is-one-fifth">
+        <div class="column is-2">
             <ValidationProvider name="Тип" :rules="'required|min_value:1'" v-slot="{ }">
                 <b-select v-model="selectedType" placeholder="Способ связи" @input="onChange">
                     <option
@@ -19,7 +19,7 @@
                 </b-select>
             </ValidationProvider>
         </div>
-        <div class="column is-three-quarters">
+        <div class="column is-8">
             <ValidationProvider :name="contact.type.name" :rules="contact.type.validator ? contact.type.validator : ''" v-slot="{ invalid, touched, errors }">
                 <b-field
                     :type="{'is-danger': invalid && touched }"
@@ -35,7 +35,7 @@
                 </b-field>
             </ValidationProvider>
         </div>
-        <div class="column is-flex is-justify-content-center">
+        <div class="column is-2 is-flex is-justify-content-center">
             <b-button v-if="!isLast" :disabled="loading" @click.prevent="onAddClick" class="mr-1">+</b-button>
             <b-button :disabled="loading" @click.prevent="onRemoveClick" :class="{ 'ml-1': !isLast }">-</b-button>
         </div>
