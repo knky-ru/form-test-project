@@ -20,7 +20,7 @@
 * Open terminal and go to `\backend\` folder
 * Run `composer install` to load dependencies
 * Run `php artisan serve` to start backend
-* Make sure it started at port :8000.
+* Make sure it started at port 8000.
 
 ### Open app
 * Open http://localhost:8080/ 
