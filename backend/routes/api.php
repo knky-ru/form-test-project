@@ -34,4 +34,11 @@ Route::group(['namespace' => 'Api'], function () {
         });
     });
 
+    Route::group(['namespace' => 'Contact'], function () {
+        Route::get('communications', 'CommunicationController@index');
+
+        Route::get('contacts', 'ContactController@index')->middleware('auth:api');
+        Route::put('contacts', 'ContactController@update')->middleware('auth:api');
+    });
+
 });

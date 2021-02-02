@@ -19,12 +19,12 @@
         <b-navbar-item tag="router-link" :to="{ path: '/table' }">
             Таблица заказов
         </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/about' }">
-            О программе
+        <b-navbar-item tag="router-link" :to="{ path: '/contacts' }">
+          Контакты
         </b-navbar-item>
-<!--        <b-navbar-item tag="router-link" :to="{ path: '/contacts' }">-->
-<!--            Контакты-->
-<!--        </b-navbar-item>-->
+        <b-navbar-item tag="router-link" :to="{ path: '/about' }">
+          О программе
+        </b-navbar-item>
       </template>
       <template #end>
         <b-navbar-item tag="div">
@@ -56,7 +56,7 @@ export default {
     logout() {
       this.$store
         .dispatch("user/logout")
-        .then(() => this.$router.push({ path: "/guard", params: { mode: "LOGOUT" } }))
+        .then(() => this.$router.push({ path: "/logout" }))
         .catch(err => console.log(err));
     },
   }

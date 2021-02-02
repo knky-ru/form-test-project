@@ -48,5 +48,26 @@ Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
 
 const token = localStorage.getItem("token");
-if (token) Axios.defaults.headers.common["Authorization"] = token;
-Vue.prototype.$http = Axios;
+if (token) Axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+Axios.interceptors.response.use(function (response) {
+  return response;
+}, function (error) {
+  if (error.response.status === 401) {
+    store.dispatch('user/logout', { root: true, })
+        .then(() => router.push({ path: "/logout" }))
+  }
+  return Promise.reject(error);
+});
+
+import { extend, localize } from 'vee-validate';
+import { required, email, min, min_value, numeric } from 'vee-validate/dist/rules';
+import ru from 'vee-validate/dist/locale/ru.json';
+
+extend('required', required);
+extend('email', email);
+extend('min', min);
+extend('min_value', min_value);
+extend('numeric', numeric);
+
+localize('ru', ru);

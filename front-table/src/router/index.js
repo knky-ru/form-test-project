@@ -15,7 +15,17 @@ const routes = [
     path: "/guard",
     name: "Guard",
     component: () => import("../components/Auth/Guard.vue"),
-    props: true,
+    props: {
+      mode: "FORBIDDEN"
+    },
+  },
+  {
+    path: "/logout",
+    name: "Logout",
+    component: () => import("../components/Auth/Guard.vue"),
+    props: {
+      mode: "LOGOUT"
+    },
   },
   {
     path: "/about",

@@ -26,7 +26,7 @@
             </b-table-column>
 
             <template #bottom-left>
-                <b>Total checked</b>: {{ checkedRows.length }}
+                <b>Выбрано</b>: {{ checkedRows.length }}
             </template>
         </b-table>
     </section>
