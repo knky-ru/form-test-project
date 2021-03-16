@@ -1,4 +1,4 @@
-# form-test-project
+# Test Project on Vue.js and Laravel 8 (API)
 
 ## HOW TO RUN
 * Clone project `git clone https://github.com/knky-ru/form-test-project.git`
