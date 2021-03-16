@@ -6,7 +6,7 @@
 ### Database
 * Make sure you have local MySQL server installed
 * Create database with credentials `\mysql\creds.txt`
-* Load `\mysql\dump.sql` to database
+* Load `\mysql\dump.sql` to database or run migrations and seeders
 
 ### Run Vue.js frontend app
 * Make sure you have Node.js installed https://nodejs.org/en/download/
